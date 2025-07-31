@@ -6,8 +6,8 @@ Algoritmo calculadora_alimentos
 	Definir peso, RER, DER, fact, Kcal, CroquetaPerro Como Real
 	Definir pesobien Como Logico
 	
-	Escribir "¡Bienvenido a la calculadora de alimento para su mascota!"
-	Escribir "¿Qué mascota tiene? (perro, gato o conejo): "
+	Escribir "Â¡Bienvenido a la calculadora de alimento para su mascota!"
+	Escribir "Â¿QuÃ© mascota tiene? (perro, gato o conejo): "
 	Leer especie
 	
 		//Si el usuario escribe perro, entonces
@@ -16,23 +16,23 @@ Algoritmo calculadora_alimentos
 			Escribir "Ingrese el nombre de su perro"
 			Leer nombre
 			
-			//Se solicita el tamaño del perro
-			Escribir "¿De qué tamaño es ", nombre, "? Escriba la letra correspondiente"
+			//Se solicita el tamaÃ±o del perro
+			Escribir "Â¿De quÃ© tamaÃ±o es ", nombre, "? Escriba la letra correspondiente"
 			Escribir "[m] = mini (1 a 5 kg)"
-			Escribir "[p] = pequeño (6 a 10 kg)"
+			Escribir "[p] = pequeÃ±o (6 a 10 kg)"
 			Escribir "[M] = mediano (11 a 25 kg)"
 			Escribir "[g] = grande (26 a 45 kg)"
 			Escribir "[G] = gigante (+ 45 kg)"
 			Repetir
 				Leer tam
 				Si tam<>"m" y tam<>"p" y tam<>"M" y tam<>"g" y tam<>"G"
-					Escribir "La opción seleccionada es inexistente. Escriba la letra correspondiente"
+					Escribir "La opciÃ³n seleccionada es inexistente. Escriba la letra correspondiente"
 				FinSi
 				
 			Hasta Que tam="m" o tam="p" o tam="M" o tam="g" o tam="G"
 			
 			//Se solicita el peso del perro
-			Escribir "¿Cuánto pesa ", nombre, "? Escriba el peso en kilogramos (kg)"
+			Escribir "Â¿CuÃ¡nto pesa ", nombre, "? Escriba el peso en kilogramos (kg)"
 			Repetir
 				pesobien<-Verdadero
 				Leer peso
@@ -90,30 +90,30 @@ Algoritmo calculadora_alimentos
 					
 			Fin Segun
 			
-			//calcular Requerimiento Energético Diario (DER)
+			//calcular Requerimiento EnergÃ©tico Diario (DER)
 			//averiguar edad de perro
-			Escribir "¿", nombre, " es cachorro, adulto o adulto mayor? Seleccione la opción"
+			Escribir "Â¿", nombre, " es cachorro, adulto o adulto mayor? Seleccione la opciÃ³n"
 			Escribir "[1] = cachorro (-12 meses)"
-			Escribir "[2] = adulto (1-7 años)"
-			Escribir "[3] = adulto mayor (+7 años)"
+			Escribir "[2] = adulto (1-7 aÃ±os)"
+			Escribir "[3] = adulto mayor (+7 aÃ±os)"
 			Repetir
 				Leer CachorroOAdultoOAdultoMayor
 				
 				Si CachorroOAdultoOAdultoMayor<>1 y CachorroOAdultoOAdultoMayor<>2 y CachorroOAdultoOAdultoMayor<>3
-					Escribir "El valor insertado no es válido"
-					Escribir "Ingrese el número [1], [2] o [3] según la edad que tenga su perro"
+					Escribir "El valor insertado no es vÃ¡lido"
+					Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn la edad que tenga su perro"
 				FinSi
 				
 			Hasta Que CachorroOAdultoOAdultoMayor=1 o CachorroOAdultoOAdultoMayor=2 o CachorroOAdultoOAdultoMayor=3
 			
 			Segun CachorroOAdultoOAdultoMayor Hacer
 				1:
-					Escribir "¡Excelente!"
-					Escribir "¿Cuántos meses tiene ", nombre, "?"
+					Escribir "Â¡Excelente!"
+					Escribir "Â¿CuÃ¡ntos meses tiene ", nombre, "?"
 					Repetir
 						Leer ECach
 						Si ECach<1 o ECach>=12 Entonces
-							Escribir "La edad ingresada no corresponde a la de un cachorro, inténtelo de nuevo"
+							Escribir "La edad ingresada no corresponde a la de un cachorro, intÃ©ntelo de nuevo"
 						FinSi
 					Hasta Que ECach>=1 y ECach<12
 					
@@ -128,18 +128,18 @@ Algoritmo calculadora_alimentos
 					FinSi
 					
 				2:
-					Escribir "¡Excelente!"
-					Escribir "¿Cuántos años tiene ", nombre, "?"
+					Escribir "Â¡Excelente!"
+					Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 					Repetir
 						Leer EAd
 						Si EAd<1 o EAd>7 Entonces
-							Escribir "La edad ingresada no corresponde a la de un adulto, inténtelo de nuevo"
+							Escribir "La edad ingresada no corresponde a la de un adulto, intÃ©ntelo de nuevo"
 						FinSi
 					Hasta Que EAd>=1 y EAd<=7
 					
 					Si EAd>=1 y EAd<=7 Entonces
 						//averiguar actividad de perro
-						Escribir "¿" nombre, " es un perro activo o sedentario? Escriba la letra correspondiente"
+						Escribir "Â¿" nombre, " es un perro activo o sedentario? Escriba la letra correspondiente"
 						Escribir "[a] = activo       [s] = sedentario"
 						Repetir
 							Leer act
@@ -159,12 +159,12 @@ Algoritmo calculadora_alimentos
 					FinSi
 					
 				3:	
-					Escribir "¡Excelente!"
-					Escribir "¿Cuántos años tiene ", nombre, "?"
+					Escribir "Â¡Excelente!"
+					Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 					Repetir
 						Leer EAdM
 						Si EAd<7 o EAd>18 Entonces
-							Escribir "La edad ingresada no corresponde a la de un adulto mayor, inténtelo de nuevo"
+							Escribir "La edad ingresada no corresponde a la de un adulto mayor, intÃ©ntelo de nuevo"
 						FinSi
 					Hasta Que EAdM>=7 y EAdM<=18
 					
@@ -174,20 +174,20 @@ Algoritmo calculadora_alimentos
 					FinSi
 					
 				De Otro Modo:
-					Escribir "Caracter inválido"
+					Escribir "Caracter invÃ¡lido"
 			Fin Segun
 			
-			//Preguntar qué alimento quiere calcular
-			Escribir "¿Qué alimento quiere calcular?"
+			//Preguntar quÃ© alimento quiere calcular
+			Escribir "Â¿QuÃ© alimento quiere calcular?"
 			Escribir "[1] = Procesado (croqueta)"
-			Escribir "[2] = Sólido salado (zanahoria)"
-			Escribir "[3] = Sólido dulce (pera o manzana)"
+			Escribir "[2] = SÃ³lido salado (zanahoria)"
+			Escribir "[3] = SÃ³lido dulce (pera o manzana)"
 			Repetir
 				Leer tipo_comida
 				
 				Si tipo_comida<>1 y tipo_comida<>2 y tipo_comida<>3
-					Escribir "El valor insertado no es válido"
-					Escribir "Ingrese el número [1], [2] o [3] según el alimento que desea calcular"
+					Escribir "El valor insertado no es vÃ¡lido"
+					Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn el alimento que desea calcular"
 				FinSi
 				
 			Hasta Que tipo_comida=1 o tipo_comida=2 o tipo_comida=3
@@ -200,8 +200,8 @@ Algoritmo calculadora_alimentos
 					
 					Escribir "Calculando cantidad ideal de croquetas para ", nombre, "..."
 					Escribir "..."
-					//se indica la cantidad de tazas de croqueta que el perro requiere al día
-					Escribir nombre, " requiere ", CroquetaPerro, " tazas de croqueta al día"
+					//se indica la cantidad de tazas de croqueta que el perro requiere al dÃ­a
+					Escribir nombre, " requiere ", CroquetaPerro, " tazas de croqueta al dÃ­a"
 					
 					//Iniciar variables 
 					Definir X Como Cadena
@@ -233,58 +233,58 @@ Algoritmo calculadora_alimentos
 					FinSi
 					
 					Escribir " "
-					//le digo al usuario cuántas veces debe comer su perro al día basándonos en su edad
-					Escribir "Ya que ", nombre, " es un ", X,", los veterinarios recomiendan alimentarlo con croquetas: ", Tantas, " vez/veces al día,"
+					//le digo al usuario cuÃ¡ntas veces debe comer su perro al dÃ­a basÃ¡ndonos en su edad
+					Escribir "Ya que ", nombre, " es un ", X,", los veterinarios recomiendan alimentarlo con croquetas: ", Tantas, " vez/veces al dÃ­a,"
 					
-					//hago esta parte porque si no, el código indica que "Tantas" puede ser un valor que divide entre 0
+					//hago esta parte porque si no, el cÃ³digo indica que "Tantas" puede ser un valor que divide entre 0
 					Si Tantas>0 Entonces
 						CroquetaPerroDiv <- CroquetaPerro/Tantas
 					FinSi
 					
-					//AQUÍ PODEMOS CONVERTIR LO DE LAS TAZAS COMO CON EL CONEJO, PERO LUEGO
+					//AQUÃ PODEMOS CONVERTIR LO DE LAS TAZAS COMO CON EL CONEJO, PERO LUEGO
 					
-					//le digo al usuario cuántas tazas de croqueta debe comer su perrito en cada porción que le da durante el día para llegar al total diario
-					Escribir "eso significa que en un día, ", nombre, " debe comer ", CroquetaPerroDiv " tazas de croquetas por porción." 
+					//le digo al usuario cuÃ¡ntas tazas de croqueta debe comer su perrito en cada porciÃ³n que le da durante el dÃ­a para llegar al total diario
+					Escribir "eso significa que en un dÃ­a, ", nombre, " debe comer ", CroquetaPerroDiv " tazas de croquetas por porciÃ³n." 
 					
-				2: //Si el usuario elige sólido salado, entonces
-					Escribir "Calculando cantidad ideal de sólido salado (zanahorias) para ", nombre, "..."
+				2: //Si el usuario elige sÃ³lido salado, entonces
+					Escribir "Calculando cantidad ideal de sÃ³lido salado (zanahorias) para ", nombre, "..."
 					Escribir "..."
 					
 					Segun CachorroOAdultoOAdultoMayor Hacer
 						1: //Cachorro
-							Escribir nombre, " debe consumir 1 zanahoria pequeña al día."
+							Escribir nombre, " debe consumir 1 zanahoria pequeÃ±a al dÃ­a."
 							Escribir "RECOMENDACIONES: "
 							Escribir "Las zanahorias deben ser un snack ocasional para ", nombre
-							Escribir "Se recomienda cortar la zanahoria en trozos muy pequeños para evitar riesgos de asfixia."
-							Escribir "Las zanahorias frías pueden ser útiles para aliviar las molestias de la dentición."
+							Escribir "Se recomienda cortar la zanahoria en trozos muy pequeÃ±os para evitar riesgos de asfixia."
+							Escribir "Las zanahorias frÃ­as pueden ser Ãºtiles para aliviar las molestias de la denticiÃ³n."
 							
 						2: //Adulto
-							Escribir nombre, " debe consumir en promedio 2 zanahorias pequeñas al día."
+							Escribir nombre, " debe consumir en promedio 2 zanahorias pequeÃ±as al dÃ­a."
 							Escribir "RECOMENDACIONES: "
-							Escribir "Las zanahorias pueden ser un buen premio si ", nombre, " está a dieta." 
-							Escribir "Asegúrate de que la zanahoria sea un complemento a su dieta balanceada, no un sustituto de su comida principal."
+							Escribir "Las zanahorias pueden ser un buen premio si ", nombre, " estÃ¡ a dieta." 
+							Escribir "AsegÃºrate de que la zanahoria sea un complemento a su dieta balanceada, no un sustituto de su comida principal."
 							
 						3: //Adulto mayor
-							Escribir nombre, " debe consumir 2 zanahorias pequeñas al día, de preferencia cocidas."
+							Escribir nombre, " debe consumir 2 zanahorias pequeÃ±as al dÃ­a, de preferencia cocidas."
 							Escribir "RECOMENDACIONES: "
 							Escribir "Si " nombre, " tiene algunas enfermedades, es mejor consultar su ingesta con el veterinario."
 					FinSegun
 					
-				3: //Si el usuario elige sólido dulce, entonces
-					Escribir "Calculando cantidad ideal de sólido dulce (manzana o pera) para ", nombre, "..."
+				3: //Si el usuario elige sÃ³lido dulce, entonces
+					Escribir "Calculando cantidad ideal de sÃ³lido dulce (manzana o pera) para ", nombre, "..."
 					Escribir "..."
 					
 					Segun CachorroOAdultoOAdultoMayor Hacer
 						1, 2: //Cachorro o Adulto
-							Escribir nombre, " debe consumir unos trozos de manzana o pera, sin corazón ni semillas, una o dos veces por semana."
-							Escribir "RECOMENDACIÓN: "
-							Escribir "Es una buena opción únicamente como premio."
+							Escribir nombre, " debe consumir unos trozos de manzana o pera, sin corazÃ³n ni semillas, una o dos veces por semana."
+							Escribir "RECOMENDACIÃ“N: "
+							Escribir "Es una buena opciÃ³n Ãºnicamente como premio."
 							
 						3: // Adulto mayor
-							Escribir nombre, " debe consumir unos trozos de manzana o pera, sin corazón ni semillas, una o dos veces por semana."
+							Escribir nombre, " debe consumir unos trozos de manzana o pera, sin corazÃ³n ni semillas, una o dos veces por semana."
 							Escribir "RECOMENDACIONES: "
-							Escribir "Es una buena opción únicamente como premio."
-							Escribir "Es importante observar cualquier señal de problemas digestivos y ajustar la cantidad si es necesario."
+							Escribir "Es una buena opciÃ³n Ãºnicamente como premio."
+							Escribir "Es importante observar cualquier seÃ±al de problemas digestivos y ajustar la cantidad si es necesario."
 							Escribir "Si es el caso, consultarlo con el veterinario."
 					FinSeguN
 					
@@ -292,14 +292,14 @@ Algoritmo calculadora_alimentos
 			
 		SiNo
 			//--------------------------------------------------------------------------------------------------------------------------------------------------
-			//                   /          /          /          AQUÍ EMPIEZA LO DEL GATO              /          /           /
+			//                   /          /          /          AQUÃ EMPIEZA LO DEL GATO              /          /           /
 			//--------------------------------------------------------------------------------------------------------------------------------------------------
 			Si especie = "gato" Entonces
 				Escribir "Ingrese el nombre de su gato"
 				Leer nombre
 				
 				//Se solicita el peso del gato
-				Escribir "¿Cuánto pesa ", nombre, "? Escriba el peso en kilogramos (kg)"
+				Escribir "Â¿CuÃ¡nto pesa ", nombre, "? Escriba el peso en kilogramos (kg)"
 				Repetir
 					Leer peso
 					
@@ -314,28 +314,28 @@ Algoritmo calculadora_alimentos
 				RER<-70*(peso)^0.75
 				
 				//averiguar edad de gatito
-				Escribir "¿", nombre, " es cachorro, adulto o adulto mayor? Seleccione la opción."
+				Escribir "Â¿", nombre, " es cachorro, adulto o adulto mayor? Seleccione la opciÃ³n."
 				Escribir "[1] = cachorro (0-12 meses)"
-				Escribir "[2] = adulto (1-7 años)"
-				Escribir "[3] = adulto mayor (+7 años)"
+				Escribir "[2] = adulto (1-7 aÃ±os)"
+				Escribir "[3] = adulto mayor (+7 aÃ±os)"
 				Repetir
 					Leer CachorroOAdultoOAdultoMayor
 					
 					Si CachorroOAdultoOAdultoMayor<>1 y CachorroOAdultoOAdultoMayor<>2 y CachorroOAdultoOAdultoMayor<>3
-						Escribir "El valor insertado no es válido"
-						Escribir "Ingrese el número [1], [2] o [3] según la edad que tenga su perro"
+						Escribir "El valor insertado no es vÃ¡lido"
+						Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn la edad que tenga su perro"
 					FinSi
 					
 				Hasta Que CachorroOAdultoOAdultoMayor=1 o CachorroOAdultoOAdultoMayor=2 o CachorroOAdultoOAdultoMayor=3
 				
 				Segun CachorroOAdultoOAdultoMayor Hacer
 					1:
-						Escribir "¡Excelente!"
-						Escribir "¿Cuántos meses tiene ", nombre, "?"
+						Escribir "Â¡Excelente!"
+						Escribir "Â¿CuÃ¡ntos meses tiene ", nombre, "?"
 						Repetir
 							Leer ECach
 							Si ECach<1 o ECach>=12 Entonces
-								Escribir "La edad ingresada no corresponde a la de un cachorro, inténtelo de nuevo"
+								Escribir "La edad ingresada no corresponde a la de un cachorro, intÃ©ntelo de nuevo"
 							FinSi
 						Hasta Que ECach>=1 y ECach<12
 						
@@ -358,12 +358,12 @@ Algoritmo calculadora_alimentos
 						FinSi
 						
 					2:
-						Escribir "¡Excelente!"
-						Escribir "¿Cuántos años tiene ", nombre, "?"
+						Escribir "Â¡Excelente!"
+						Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 						Repetir
 							Leer EAd
 							Si EAd<1 y EAd>7 Entonces
-								Escribir "La edad ingresada no corresponde a la de un adulto, inténtelo de nuevo"
+								Escribir "La edad ingresada no corresponde a la de un adulto, intÃ©ntelo de nuevo"
 							FinSi
 						Hasta Que EAd>=1 y EAd<=7
 						
@@ -373,7 +373,7 @@ Algoritmo calculadora_alimentos
 							//averiguar actividad del gato
 							//esta es de gatitos obesos :c
 							
-							Escribir "¿" nombre, " es un gato activo o sedentario? Escriba la letra correspondiente"
+							Escribir "Â¿" nombre, " es un gato activo o sedentario? Escriba la letra correspondiente"
 							Escribir "[a] = activo       [s] = sedentario"
 							Repetir
 								Leer act
@@ -403,12 +403,12 @@ Algoritmo calculadora_alimentos
 						FinSi
 						
 					3:	
-						Escribir "¡Excelente!"
-						Escribir "¿Cuántos años tiene ", nombre, "?"
+						Escribir "Â¡Excelente!"
+						Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 						Repetir
 							Leer EAdM
 							Si EAdM<7 Entonces
-								Escribir "La edad ingresada no corresponde a la de un adulto mayor, inténtelo de nuevo"
+								Escribir "La edad ingresada no corresponde a la de un adulto mayor, intÃ©ntelo de nuevo"
 							FinSi
 						Hasta Que EAdM>7
 						
@@ -421,20 +421,20 @@ Algoritmo calculadora_alimentos
 						FinSi
 						
 					De Otro Modo:
-						Escribir "Caracter inválido"
+						Escribir "Caracter invÃ¡lido"
 				Fin Segun
 				
-				//Preguntar qué alimento quiere calcular
-				Escribir "¿Qué alimento quiere calcular?"
+				//Preguntar quÃ© alimento quiere calcular
+				Escribir "Â¿QuÃ© alimento quiere calcular?"
 				Escribir "[1] = Procesado (croqueta)"
-				Escribir "[2] = Sólido salado (zanahoria)"
-				Escribir "[3] = Sólido dulce (pera o manzana)"
+				Escribir "[2] = SÃ³lido salado (zanahoria)"
+				Escribir "[3] = SÃ³lido dulce (pera o manzana)"
 				Repetir
 					Leer tipo_comida
 					
 					Si tipo_comida<>1 y tipo_comida<>2 y tipo_comida<>3
-						Escribir "El valor insertado no es válido"
-						Escribir "Ingrese el número [1], [2] o [3] según el alimento que desea calcular"
+						Escribir "El valor insertado no es vÃ¡lido"
+						Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn el alimento que desea calcular"
 					FinSi
 					
 				Hasta Que tipo_comida=1 o tipo_comida=2 o tipo_comida=3
@@ -447,99 +447,99 @@ Algoritmo calculadora_alimentos
 						
 						Escribir "Calculando cantidad ideal de croquetas para ", nombre, "..."
 						Escribir "..."
-						//se indica la cantidad de tazas de croqueta que el gato requiere al día
-						Escribir nombre, " requiere ", CroquetaGato, " tazas de croqueta al día"
+						//se indica la cantidad de tazas de croqueta que el gato requiere al dÃ­a
+						Escribir nombre, " requiere ", CroquetaGato, " tazas de croqueta al dÃ­a"
 						
 						//Iniciar variables 
 						Definir croquetaGatoDiv Como Real
 						
 						Escribir " "
-						//le digo al usuario cuántas veces debe comer su perro al día basándonos en su edad
-						Escribir "Ya que ", nombre, " es un ", X,", los veterinarios recomiendan alimentarlo con croquetas: ", Tantas, " vez/veces al día,"
+						//le digo al usuario cuÃ¡ntas veces debe comer su perro al dÃ­a basÃ¡ndonos en su edad
+						Escribir "Ya que ", nombre, " es un ", X,", los veterinarios recomiendan alimentarlo con croquetas: ", Tantas, " vez/veces al dÃ­a,"
 						
-						//hago esta parte porque si no, el código indica que "Tantas" puede ser un valor que divide entre 0
+						//hago esta parte porque si no, el cÃ³digo indica que "Tantas" puede ser un valor que divide entre 0
 						Si Tantas>0 Entonces
 							CroquetaGatoDiv <- CroquetaGato/Tantas
 						FinSi
 						
-						//AQUÍ PODEMOS LUEGO HACER LA EQUIVALENCIA DE LAS TAZAS !
+						//AQUÃ PODEMOS LUEGO HACER LA EQUIVALENCIA DE LAS TAZAS !
 						
-						//le digo al usuario cuántas tazas de croqueta debe comer su perrito en cada porción que le da durante el día para llegar al total diario
-						Escribir "eso significa que en un día, ", nombre, " debe comer ", CroquetaGatoDiv, " tazas de croquetas por porción." 
+						//le digo al usuario cuÃ¡ntas tazas de croqueta debe comer su perrito en cada porciÃ³n que le da durante el dÃ­a para llegar al total diario
+						Escribir "eso significa que en un dÃ­a, ", nombre, " debe comer ", CroquetaGatoDiv, " tazas de croquetas por porciÃ³n." 
 						
-					2: //Si el usuario elige sólido salado, entonces
-						Escribir "Calculando cantidad ideal de sólido salado (zanahorias) para ", nombre, "..."
+					2: //Si el usuario elige sÃ³lido salado, entonces
+						Escribir "Calculando cantidad ideal de sÃ³lido salado (zanahorias) para ", nombre, "..."
 						Escribir "..."
 						
 						Segun CachorroOAdultoOAdultoMayor Hacer
 							1: //Cachorro
 								Escribir nombre, " debe consumir 1 zanahoria pelada, cocida y en trozos, por semana."
 								Escribir "RECOMENDACIONES: "
-								Escribir "Se recomienda distribuir la porción en toda la semana."
+								Escribir "Se recomienda distribuir la porciÃ³n en toda la semana."
 								Escribir "Las zanahorias deben ser un snack ocasional para ", nombre							
 								
 							2: //Adulto
 								Escribir nombre, " debe consumir 1 o 2 zanahorias peladas, cocidas y en trozos, por semana."
 								Escribir "RECOMENDACIONES: "
-								Escribir "Las zanahorias pueden ser un buen premio si ", nombre, " está a dieta." 
-								Escribir "Asegúrate de que la zanahoria sea un complemento a su dieta balanceada, no un sustituto de su comida principal."
+								Escribir "Las zanahorias pueden ser un buen premio si ", nombre, " estÃ¡ a dieta." 
+								Escribir "AsegÃºrate de que la zanahoria sea un complemento a su dieta balanceada, no un sustituto de su comida principal."
 								
 							3: //Adulto mayor
 								Escribir nombre, " debe consumir 1 o 2 zanahorias peladas, cocidas y en trozos, por semana."
 								Escribir "RECOMENDACIONES: "
-								Escribir "Por la edad de ", nombre, " se recomienda que esté bien cocida para que sea fácil de masticar."
+								Escribir "Por la edad de ", nombre, " se recomienda que estÃ© bien cocida para que sea fÃ¡cil de masticar."
 								Escribir "Si " nombre, " tiene algunas enfermedades, es mejor consultar su ingesta con el veterinario."
 						FinSegun
 						
-					3: //Si el usuario elige sólido dulce, entonces
-						Escribir "Calculando cantidad ideal de sólido dulce (manzana o pera) para ", nombre, "..."
+					3: //Si el usuario elige sÃ³lido dulce, entonces
+						Escribir "Calculando cantidad ideal de sÃ³lido dulce (manzana o pera) para ", nombre, "..."
 						Escribir "..."
 						
 						Segun CachorroOAdultoOAdultoMayor Hacer
 							1: //Cachorro
-								Escribir nombre, " debe consumir una cucharadita, ya sea en trozos muy pequeños o rallados de manzana o pera cocida, una vez por día."
-								Escribir "RECOMENDACIÓN: "
-								Escribir "No olvides evitar darle el corazón o las semillas."
+								Escribir nombre, " debe consumir una cucharadita, ya sea en trozos muy pequeÃ±os o rallados de manzana o pera cocida, una vez por dÃ­a."
+								Escribir "RECOMENDACIÃ“N: "
+								Escribir "No olvides evitar darle el corazÃ³n o las semillas."
 								Escribir "Es mejor ofrecer un solo tipo de fruta a la vez para identificar posibles reacciones adversas."
 								
 							2: //Adulto
-								Escribir nombre, " debe consumir un trozo de manzana o pera cocida, al día."
-								Escribir "RECOMENDACIÓN: "
-								Escribir "No olvides evitar darle el corazón o las semillas."
-								Escribir "Es una buena opción únicamente como premio."	
+								Escribir nombre, " debe consumir un trozo de manzana o pera cocida, al dÃ­a."
+								Escribir "RECOMENDACIÃ“N: "
+								Escribir "No olvides evitar darle el corazÃ³n o las semillas."
+								Escribir "Es una buena opciÃ³n Ãºnicamente como premio."	
 								
 							3: // Adulto mayor
-								Escribir nombre, " debe consumir un trozo de manzana o pera cocida y sin cáscara, al día."
+								Escribir nombre, " debe consumir un trozo de manzana o pera cocida y sin cÃ¡scara, al dÃ­a."
 								Escribir "RECOMENDACIONES: "
-								Escribir "No olvides evitar darle el corazón o las semillas."
-								Escribir "Es una buena opción únicamente como premio."	
+								Escribir "No olvides evitar darle el corazÃ³n o las semillas."
+								Escribir "Es una buena opciÃ³n Ãºnicamente como premio."	
 						FinSegun
 				FinSegun	
 				
 			SiNo
 				//--------------------------------------------------------------------------------------------------------------------------------------------------
-				//               /          /           /        AQUÍ EMPIEZA LO DEL CONEJO             /          /          /
+				//               /          /           /        AQUÃ EMPIEZA LO DEL CONEJO             /          /          /
 				//--------------------------------------------------------------------------------------------------------------------------------------------------
 				Si especie = "conejo" Entonces
 					Escribir "Ingrese el nombre de su conejo"
 					Leer nombre
 					
-					//Se solicita el tamaño del conejo
-					Escribir "¿De qué tamaño es ", nombre, "? Escriba la letra correspondiente"
+					//Se solicita el tamaÃ±o del conejo
+					Escribir "Â¿De quÃ© tamaÃ±o es ", nombre, "? Escriba la letra correspondiente"
 					Escribir "[m] = mini (menos de 1.75 kg)"
-					Escribir "[p] = pequeño (1.75 a 2.25 kg)"
+					Escribir "[p] = pequeÃ±o (1.75 a 2.25 kg)"
 					Escribir "[M] = mediano (2.25 a 5 kg)"
 					Escribir "[g] = grande (5 a 8 kg)"
 					Repetir
 						Leer tam
 						Si tam<>"m" y tam<>"p" y tam<>"M" y tam<>"g"
-							Escribir "La opción seleccionada es inexistente. Escriba la letra correspondiente"
+							Escribir "La opciÃ³n seleccionada es inexistente. Escriba la letra correspondiente"
 						FinSi
 						
 					Hasta Que tam="m" o tam="p" o tam="M" o tam="g" 
 					
 					//Se solicita el peso del conejo
-					Escribir "¿Cuánto pesa ", nombre, "? Escriba el peso en kilogramos y con dos decimales (kg)"
+					Escribir "Â¿CuÃ¡nto pesa ", nombre, "? Escriba el peso en kilogramos y con dos decimales (kg)"
 					Repetir
 						pesobien<-Verdadero
 						Leer peso
@@ -582,16 +582,16 @@ Algoritmo calculadora_alimentos
 					Hasta Que pesobien
 					
 					//averiguar edad del conejo
-					Escribir "¿", nombre, " es un gazapo, adulto o adulto mayor? Seleccione la opción"
+					Escribir "Â¿", nombre, " es un gazapo, adulto o adulto mayor? Seleccione la opciÃ³n"
 					Escribir "[1] = gazapo (-9 meses)"
-					Escribir "[2] = adulto (9 meses a 5 años)"
-					Escribir "[3] = adulto mayor (+5 años)"
+					Escribir "[2] = adulto (9 meses a 5 aÃ±os)"
+					Escribir "[3] = adulto mayor (+5 aÃ±os)"
 					Repetir
 						Leer CachorroOAdultoOAdultoMayor
 						
 						Si CachorroOAdultoOAdultoMayor<>1 y CachorroOAdultoOAdultoMayor<>2 y CachorroOAdultoOAdultoMayor<>3
-							Escribir "El valor insertado no es válido"
-							Escribir "Ingrese el número [1], [2] o [3] según la edad que tenga su conejo"
+							Escribir "El valor insertado no es vÃ¡lido"
+							Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn la edad que tenga su conejo"
 						FinSi
 						
 					Hasta Que CachorroOAdultoOAdultoMayor=1 o CachorroOAdultoOAdultoMayor=2 o CachorroOAdultoOAdultoMayor=3
@@ -599,52 +599,52 @@ Algoritmo calculadora_alimentos
 					Segun CachorroOAdultoOAdultoMayor Hacer
 						1: //Cachorro
 							X="gazapo"
-							Escribir "¡Excelente!"
-							Escribir "¿Cuántos meses tiene ", nombre, "?"
+							Escribir "Â¡Excelente!"
+							Escribir "Â¿CuÃ¡ntos meses tiene ", nombre, "?"
 							Repetir
 								Leer ECach
 								Si ECach < 0 o ECach >= 9 Entonces
-									Escribir "Por favor ingrese un número válido entre 0 y 9."
+									Escribir "Por favor ingrese un nÃºmero vÃ¡lido entre 0 y 9."
 								FinSi
 							Hasta Que ECach >= 0 y ECach < 9
 							
 						2: //Adulto
 							X="adulto"
-							Escribir "¡Excelente!"
-							Escribir "¿Cuántos años tiene ", nombre, "?"
+							Escribir "Â¡Excelente!"
+							Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 							Repetir
 								Leer EAd
 								Si EAd < 1 o EAd >= 5 Entonces
-									Escribir "Por favor ingrese un número válido entre 1 y 5."
+									Escribir "Por favor ingrese un nÃºmero vÃ¡lido entre 1 y 5."
 								FinSi
 							Hasta Que EAd >= 1 y eAd <= 5 
 							
 						3:	//Adulto mayor
 							X="adulto mayor"
-							Escribir "¡Excelente!"
-							Escribir "¿Cuántos años tiene ", nombre, "?"
+							Escribir "Â¡Excelente!"
+							Escribir "Â¿CuÃ¡ntos aÃ±os tiene ", nombre, "?"
 							Repetir
 								Leer EAdM
 								Si EAdM < 5 Entonces
-									Escribir "Por favor ingrese un número válido (mayor o igual a 5)."
+									Escribir "Por favor ingrese un nÃºmero vÃ¡lido (mayor o igual a 5)."
 								FinSi
 							Hasta Que EAdM >= 5
 							
 						De Otro Modo:
-							Escribir "Caracter inválido"
+							Escribir "Caracter invÃ¡lido"
 					Fin Segun
 					
-					//Preguntar qué alimento quiere calcular
-					Escribir "¿Qué alimento quiere calcular?"
+					//Preguntar quÃ© alimento quiere calcular
+					Escribir "Â¿QuÃ© alimento quiere calcular?"
 					Escribir "[1] = Procesado (pellets)"
-					Escribir "[2] = Sólido salado (zanahoria)"
-					Escribir "[3] = Sólido dulce (pera o manzana)"
+					Escribir "[2] = SÃ³lido salado (zanahoria)"
+					Escribir "[3] = SÃ³lido dulce (pera o manzana)"
 					Repetir
 						Leer tipo_comida
 						
 						Si tipo_comida<>1 y tipo_comida<>2 y tipo_comida<>3
-							Escribir "El valor insertado no es válido"
-							Escribir "Ingrese el número [1], [2] o [3] según el alimento que desea calcular"
+							Escribir "El valor insertado no es vÃ¡lido"
+							Escribir "Ingrese el nÃºmero [1], [2] o [3] segÃºn el alimento que desea calcular"
 						FinSi
 						
 					Hasta Que tipo_comida=1 o tipo_comida=2 o tipo_comida=3
@@ -654,7 +654,7 @@ Algoritmo calculadora_alimentos
 							Escribir "Calculando cantidad ideal de pellets para ", nombre, "..."
 							Escribir "..."
 							
-							//Calcular gramos diarios según edad
+							//Calcular gramos diarios segÃºn edad
 							Segun CachorroOAdultoOAdultoMayor Hacer
 								1: //Cachorro
 									gramos_pellets <- peso*0.04
@@ -667,7 +667,7 @@ Algoritmo calculadora_alimentos
 							//Convertir gramos a tazas (1 taza = 100g)
 							tazas_dec <- gramos_pellets / 100
 							
-							//Determinar fracción de taza más cercana
+							//Determinar fracciÃ³n de taza mÃ¡s cercana
 							Si tazas_dec < 0.375 Entonces
 								taza_aprox <- "1/4 taza"
 							Sino
@@ -682,41 +682,41 @@ Algoritmo calculadora_alimentos
 								FinSi
 							FinSi
 							
-							//le digo al usuario cuántas veces debe comer su conejo al día basándonos en su edad
-							Escribir "Ya que ", nombre, " es un ", X,", debe consumir: ", gramos_pellets, "gr de pellets al día"
+							//le digo al usuario cuÃ¡ntas veces debe comer su conejo al dÃ­a basÃ¡ndonos en su edad
+							Escribir "Ya que ", nombre, " es un ", X,", debe consumir: ", gramos_pellets, "gr de pellets al dÃ­a"
 							Escribir "Esto equivale aproximadamente a ", taza_aprox, "."
-							Escribir "RECOMENDACIÓN:"
-							Escribir "No olvides ofrecer heno ilimitado además del pellet."
+							Escribir "RECOMENDACIÃ“N:"
+							Escribir "No olvides ofrecer heno ilimitado ademÃ¡s del pellet."
 							
-						2: //Si el usuario elige sólido salado, entonces
-							Escribir "Calculando cantidad ideal de sólido salado (zanahorias) para ", nombre, "..."
+						2: //Si el usuario elige sÃ³lido salado, entonces
+							Escribir "Calculando cantidad ideal de sÃ³lido salado (zanahorias) para ", nombre, "..."
 							Escribir "..."		
 							
 							Segun CachorroOAdultoOAdultoMayor Hacer
 								1: //Cachorro
 									Escribir nombre, " debe consumir 1 zanahoria a la semana."
 									Escribir "RECOMENDACIONES: "
-									Escribir "Distribuir la ración durante toda la semana, en trozos pequeños."
-									Escribir "No exceder la porción sugerida ya que podría generar problemas en su salud a largo plazo."
+									Escribir "Distribuir la raciÃ³n durante toda la semana, en trozos pequeÃ±os."
+									Escribir "No exceder la porciÃ³n sugerida ya que podrÃ­a generar problemas en su salud a largo plazo."
 									Escribir "No olvides incluir otras verduras y heno en su dieta."
 									
 								2: //Adulto 
 									Escribir nombre, " debe consumir de 1 a 2 zanahorias a la semana."
 									Escribir "RECOMENDACIONES: "
-									Escribir "Distribuir la ración durante toda la semana."
-									Escribir "No exceder la porción sugerida ya que podría generar problemas en su salud a largo plazo."
+									Escribir "Distribuir la raciÃ³n durante toda la semana."
+									Escribir "No exceder la porciÃ³n sugerida ya que podrÃ­a generar problemas en su salud a largo plazo."
 									Escribir "No olvides incluir otras verduras y heno en su dieta."
 									
 								3: //Adulto mayor
 									Escribir nombre, " debe consumir 1 y 1/2 zanahorias a la semana."
 									Escribir "RECOMENDACIONES: "
-									Escribir "Distribuir la ración durante toda la semana, en trozos pequeños."
-									Escribir "No exceder la porción sugerida ya que podría generar problemas en su salud a largo plazo."
+									Escribir "Distribuir la raciÃ³n durante toda la semana, en trozos pequeÃ±os."
+									Escribir "No exceder la porciÃ³n sugerida ya que podrÃ­a generar problemas en su salud a largo plazo."
 									Escribir "No olvides incluir otras verduras y heno en porciones controladas en su dieta."
 							FinSegun
 							
-						3: //Si el usuario elige sólido dulce, entonces
-							Escribir "Calculando cantidad ideal de sólido dulce (manzana o pera) para ", nombre, "..."
+						3: //Si el usuario elige sÃ³lido dulce, entonces
+							Escribir "Calculando cantidad ideal de sÃ³lido dulce (manzana o pera) para ", nombre, "..."
 							Escribir "..."
 							
 							Segun CachorroOAdultoOAdultoMayor Hacer
@@ -726,17 +726,17 @@ Algoritmo calculadora_alimentos
 								2: //Adulto
 									Escribir nombre, " debe consumir 1 o 2 rebanadas de pera o manzana a la semana."
 									Escribir "RECOMENDACIONES: "
-									Escribir "Distribuir la ración durante toda la semana."
+									Escribir "Distribuir la raciÃ³n durante toda la semana."
 									Escribir "No olvides quitar las semillas de las frutas ya que pueden generar problemas en la salud de " nombre, "."
-									Escribir "No exceder la porción sugerida ya que podría generar problemas en la salud de " nombre, " a largo plazo." 
+									Escribir "No exceder la porciÃ³n sugerida ya que podrÃ­a generar problemas en la salud de " nombre, " a largo plazo." 
 									Escribir "No olvides incluir heno en su dieta."
 									
 								3: // Adulto mayor
 									Escribir nombre, " debe consumir 1 rebanada de pera o manzana a la semana."
 									Escribir "RECOMENDACIONES: "
-									Escribir "Distribuir la ración durante toda la semana."
+									Escribir "Distribuir la raciÃ³n durante toda la semana."
 									Escribir "No olvides quitar las semillas de las frutas ya que pueden generar problemas en la salud de " nombre, "."
-									Escribir "No exceder la porción sugerida ya que podría generar problemas en la salud de " nombre, " a largo plazo." 
+									Escribir "No exceder la porciÃ³n sugerida ya que podrÃ­a generar problemas en la salud de " nombre, " a largo plazo." 
 									Escribir "No olvides incluir heno de forma controlada en su dieta."
 							FinSegun
 							
