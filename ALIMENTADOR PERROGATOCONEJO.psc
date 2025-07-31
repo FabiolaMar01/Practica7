@@ -9,14 +9,7 @@ Algoritmo calculadora_alimentos
 	//Introducción del software al usuario
 	Escribir "¡Bienvenido a la calculadora de alimento para su mascota!"
 	Escribir "¿Qué mascota tiene? (perro, gato o conejo): "
-	//validar que el usuario escriba bien la información
-	Repetir
-		Leer especie
-		Si especie<>"perro" y especie<>"gato" y especie<>"conejo" Entonces
-			Escribir "asegúrese de escribir el tipo de especie seleccionada con minúsculas"
-		FinSi
-	Hasta Que especie = perro o especie = gato o especie =c conejo
-	
+	Leer especie
 	//Si el usuario escribe perro, entonces
 	//--------------------------------------------------------------------------------------------------------------------------------------------------
 	//                   /          /          /          AQUÍ EMPIEZA LO DEL PERRO              /          /           /
@@ -125,7 +118,7 @@ Algoritmo calculadora_alimentos
 					//usuario elige que su perrito es cachorro
 					Escribir "¡Excelente!"
 					Escribir "¿Cuántos meses tiene ", nombre, "?"
-					/
+					//validar
 					Repetir
 						Leer ECach
 						Si ECach<1 o ECach>=12 Entonces
