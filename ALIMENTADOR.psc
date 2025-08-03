@@ -265,13 +265,13 @@ Algoritmo ALIMENTADOR
 						
 						Repetir
 							Escribir "¿Cuántos años tiene ", nombre, "?"
-							Leer EAd
+							Leer EAdM
 							// Llama a la función revisarNumero para validar la entrada.
-							esNumero <- revisarNumero(EAd)
+							esNumero <- revisarNumero(EAdM)
 						Hasta Que esNumero == Verdadero // Continúa el ciclo mientras la entrada no sea un número válido.
 						
 						
-						Si ConvertirANumero(EAd)<7 o ConvertirANumero(EAd)>18 Entonces
+						Si ConvertirANumero(EAdM)<7 o ConvertirANumero(EAdM)>18 Entonces
 							Escribir "La edad ingresada no corresponde a la de un adulto mayor, inténtelo de nuevo"
 						FinSi
 					Hasta Que ConvertirANumero(EAdM)>=7 y ConvertirANumero(EAdM)<=18
@@ -283,7 +283,7 @@ Algoritmo ALIMENTADOR
 					
 			Fin Segun
 			
-			//AQUÍ EL USUARIO YA ELIGE LA COMIDA PARA SU PERRO
+			//AQUÍ EL USUARIO YA ELIGE LA COMIDA PARA SU PERRO----------------------------------------------------
 			//Preguntar qué alimento quiere calcular
 			
 			Repetir
@@ -558,7 +558,7 @@ Algoritmo ALIMENTADOR
 					Escribir "Caracter inválido"
 			Fin Segun
 			
-			//DE AQUÍ EN ADELANTE SE LE PREGUNTA AL USUARIO EL ALIMENTO QUE QUIERE CALCULAR
+			//DE AQUÍ EN ADELANTE SE LE PREGUNTA AL USUARIO EL ALIMENTO QUE QUIERE CALCULAR----------------------------------
 			//Validamos que elige bien
 			Repetir
 				Repetir
@@ -652,6 +652,9 @@ Algoritmo ALIMENTADOR
 					FinSegun
 			FinSegun	
 		"conejo":
+			//--------------------------------------------------------------------------------------------------------------------------------------------------
+			//               /          /          /          AQUÍ EMPIEZA LO DEL CONEJO              /          /           /
+			//--------------------------------------------------------------------------------------------------------------------------------------------------
 			Repetir
 				Escribir "Ingrese el nombre de su conejo" // Pide al usuario que ingrese una palabra.
 				Leer nombre // Lee la entrada del usuario.
